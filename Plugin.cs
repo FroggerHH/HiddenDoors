@@ -9,7 +9,7 @@ internal class Plugin : BaseUnityPlugin
 {
     private const string ModName = "HiddenDoors",
         ModAuthor = "Frogger",
-        ModVersion = "1.1.1",
+        ModVersion = "1.1.2",
         ModGUID = $"com.{ModAuthor}.{ModName}";
  
     private void Awake()

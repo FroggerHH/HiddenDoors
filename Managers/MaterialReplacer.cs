@@ -1,6 +1,8 @@
 ﻿using HarmonyLib;
+using UnityEngine.Rendering;
 
 #nullable enable
+
 // ReSharper disable once CheckNamespace
 namespace HiddenDoors.PieceManager;
 
@@ -61,8 +63,7 @@ public static class MaterialReplacer
     [HarmonyPriority(Priority.VeryHigh)]
     private static void ReplaceAllMaterialsWithOriginal()
     {
-        if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null
-            || hasRun) return;
+        if (SystemInfo.graphicsDeviceType == GraphicsDeviceType.Null || hasRun) return;
 
         if (OriginalMaterials.Count == 0) GetAllMaterials();
 
